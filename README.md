@@ -43,3 +43,10 @@ mvn test
 - Liquibase schema + seed data under `src/main/resources/db/liquibase/`
 - Sample metadata, entities, and a CreateOrder process under `src/main/java/com/example/orders`
 - Mock authentication and branding defaults
+
+### Customize the template
+```bash
+python3 scripts/customize_template.py
+# follow prompts to set package, groupId, artifactId, and app label
+```
+After customizing, run `mvn clean package -DskipTests` and update metadata/entities as needed.
