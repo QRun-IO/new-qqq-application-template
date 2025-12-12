@@ -17,16 +17,20 @@ java -jar target/new-qqq-application-template.jar
 ```
 Open `http://localhost:8000/` for the dashboard and `http://localhost:8000/qqq-api/` for APIs.
 
-### Start a local Postgres 17 with Docker
+### Start a local Postgres 17 with Docker (named container)
 ```bash
-# build once
-docker build -t qqq-orders-db -f src/test/resources/postgres/Dockerfile .
+# build once (tagged image)
+docker build -t qqq-orders-db -f src/test/resources/postgres/Dockerfile src/test/resources/postgres
 
-# run
+# run as a named container
 docker run --rm -d --name qqq-orders-db -p 5432:5432 qqq-orders-db
 
 # stop
 docker rm -f qqq-orders-db
+
+# alternative: docker compose (also uses the qqq-orders-db name)
+docker compose -f src/test/resources/postgres/docker-compose.yml up -d
+docker compose -f src/test/resources/postgres/docker-compose.yml down
 ```
 
 ## Tests (H2)
