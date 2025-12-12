@@ -4,6 +4,9 @@
 # Log file
 *.log
 
+# Compiled Artifacts
+target
+
 # BlueJ files
 *.ctxt
 
