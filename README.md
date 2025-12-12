@@ -41,12 +41,13 @@ mvn test
 ## What’s included
 - Working pom with QQQ BOM + Javalin middleware + Material Dashboard
 - Liquibase schema + seed data under `src/main/resources/db/liquibase/`
-- Sample metadata, entities, and a CreateOrder process under `src/main/java/com/example/orders`
+- Sample metadata, entities, and a CreateOrder process under `src/main/java/<your/package>/`
 - Mock authentication and branding defaults
 
 ### Customize the template
 ```bash
 python3 scripts/customize_template.py
 # follow prompts to set package, groupId, artifactId, and app label
+mvn clean package -DskipTests
 ```
-After customizing, run `mvn clean package -DskipTests` and update metadata/entities as needed.
+After customizing, update metadata/entities/processes under your new package path.

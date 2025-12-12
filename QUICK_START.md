@@ -49,8 +49,9 @@ Open:
 - API: http://localhost:8000/qqq-api/
 
 ## 6) Customize for your app
-- Metadata/entities: `src/main/java/com/example/orders/model/`
-- Processes: `src/main/java/com/example/orders/processes/`
+- Run: `python3 scripts/customize_template.py` (set package, groupId, artifactId, app label)
+- Metadata/entities: `src/main/java/<your/package>/model/`
+- Processes: `src/main/java/<your/package>/processes/`
 - Branding/auth/backends: `OrderAppMetaDataProvider`
 - DB changes: Liquibase under `src/main/resources/db/liquibase/`
 
