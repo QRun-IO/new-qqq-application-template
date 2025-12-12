@@ -26,18 +26,32 @@ public final class LiquibaseRunner
       String user     = requiredEnv("RDBMS_USERNAME", "devuser");
       String password = requiredEnv("RDBMS_PASSWORD", "devpass");
 
+      Database database = null;
       try
       {
-         Database database = DatabaseFactory.getInstance().openDatabase(url, user, password, null, new ClassLoaderResourceAccessor());
+         database = DatabaseFactory.getInstance().openDatabase(url, user, password, null, new ClassLoaderResourceAccessor());
          try (Liquibase liquibase = new Liquibase("db/liquibase/changelog.yaml", new ClassLoaderResourceAccessor(), database))
          {
             liquibase.update((String) null);
          }
-         database.close();
       }
       catch(LiquibaseException e)
       {
          throw new RuntimeException("Failed to run Liquibase migrations", e);
+      }
+      finally
+      {
+         if(database != null)
+         {
+            try
+            {
+               database.close();
+            }
+            catch(Exception ignored)
+            {
+               // ignore close errors
+            }
+         }
       }
    }
 

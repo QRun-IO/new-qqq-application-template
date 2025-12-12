@@ -27,7 +27,7 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = OrderLine.TABLE_NAME)
-@QMetaDataProducingEntity(produceTableMetaData = true, tableMetaDataCustomizer = OrderLine.TableMetaDataCustomizer.class)
+@QMetaDataProducingEntity(produceTableMetaData = true, tableMetaDataCustomizer = OrderLine.TableMetaDataCustomizer.class, producePossibleValueSource = true)
 public class OrderLine extends QRecordEntity
 {
    public static final String TABLE_NAME  = "order_line";
@@ -89,6 +89,13 @@ public class OrderLine extends QRecordEntity
 
 
 
+   public void setId(Long id)
+   {
+      this.id = id;
+   }
+
+
+
    public Long getOrderId()
    {
       return orderId;
@@ -100,6 +107,13 @@ public class OrderLine extends QRecordEntity
    {
       this.orderId = orderId;
       return this;
+   }
+
+
+
+   public void setOrderId(Long orderId)
+   {
+      this.orderId = orderId;
    }
 
 
@@ -119,6 +133,13 @@ public class OrderLine extends QRecordEntity
 
 
 
+   public void setProductId(Long productId)
+   {
+      this.productId = productId;
+   }
+
+
+
    public Integer getQuantity()
    {
       return quantity;
@@ -130,6 +151,13 @@ public class OrderLine extends QRecordEntity
    {
       this.quantity = quantity;
       return this;
+   }
+
+
+
+   public void setQuantity(Integer quantity)
+   {
+      this.quantity = quantity;
    }
 
 
@@ -149,6 +177,13 @@ public class OrderLine extends QRecordEntity
 
 
 
+   public void setUnitPrice(BigDecimal unitPrice)
+   {
+      this.unitPrice = unitPrice;
+   }
+
+
+
    public BigDecimal getLineTotal()
    {
       return lineTotal;
@@ -164,6 +199,13 @@ public class OrderLine extends QRecordEntity
 
 
 
+   public void setLineTotal(BigDecimal lineTotal)
+   {
+      this.lineTotal = lineTotal;
+   }
+
+
+
    public String getNotes()
    {
       return notes;
@@ -175,6 +217,13 @@ public class OrderLine extends QRecordEntity
    {
       this.notes = notes;
       return this;
+   }
+
+
+
+   public void setNotes(String notes)
+   {
+      this.notes = notes;
    }
 
 

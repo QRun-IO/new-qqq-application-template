@@ -35,7 +35,7 @@ import java.util.List;
 
 @Entity
 @Table(name = Order.TABLE_NAME)
-@QMetaDataProducingEntity(produceTableMetaData = true, tableMetaDataCustomizer = Order.TableMetaDataCustomizer.class, childTables = {
+@QMetaDataProducingEntity(produceTableMetaData = true, tableMetaDataCustomizer = Order.TableMetaDataCustomizer.class, producePossibleValueSource = true, childTables = {
    @ChildTable(joinFieldName = "orderId", childTableEntityClass = OrderLine.class, childJoin = @ChildJoin(enabled = true), childRecordListWidget = @ChildRecordListWidget(enabled = true, label = "Order Lines", maxRows = 20)) })
 public class Order extends QRecordEntity
 {
@@ -58,7 +58,7 @@ public class Order extends QRecordEntity
    private Long customerId;
 
    @Column(name = "status", nullable = false, length = 40)
-   @QField(isRequired = true, backendName = "status", defaultValue = "NEW", valueTooLongBehavior = ValueTooLongBehavior.ERROR)
+   @QField(isRequired = true, backendName = "status", defaultValue = "NEW", maxLength = 40, valueTooLongBehavior = ValueTooLongBehavior.ERROR)
    private String status;
 
    @Column(name = "order_total", nullable = false, precision = 14, scale = 2)
@@ -93,6 +93,13 @@ public class Order extends QRecordEntity
 
 
 
+   public void setId(Long id)
+   {
+      this.id = id;
+   }
+
+
+
    public Long getCustomerId()
    {
       return customerId;
@@ -104,6 +111,13 @@ public class Order extends QRecordEntity
    {
       this.customerId = customerId;
       return this;
+   }
+
+
+
+   public void setCustomerId(Long customerId)
+   {
+      this.customerId = customerId;
    }
 
 
@@ -123,6 +137,13 @@ public class Order extends QRecordEntity
 
 
 
+   public void setStatus(String status)
+   {
+      this.status = status;
+   }
+
+
+
    public BigDecimal getOrderTotal()
    {
       return orderTotal;
@@ -134,6 +155,13 @@ public class Order extends QRecordEntity
    {
       this.orderTotal = orderTotal;
       return this;
+   }
+
+
+
+   public void setOrderTotal(BigDecimal orderTotal)
+   {
+      this.orderTotal = orderTotal;
    }
 
 
@@ -153,6 +181,13 @@ public class Order extends QRecordEntity
 
 
 
+   public void setCreateDate(Instant createDate)
+   {
+      this.createDate = createDate;
+   }
+
+
+
    public Instant getModifyDate()
    {
       return modifyDate;
@@ -168,6 +203,13 @@ public class Order extends QRecordEntity
 
 
 
+   public void setModifyDate(Instant modifyDate)
+   {
+      this.modifyDate = modifyDate;
+   }
+
+
+
    public List<OrderLine> getLines()
    {
       return lines;
@@ -179,6 +221,13 @@ public class Order extends QRecordEntity
    {
       this.lines = lines;
       return this;
+   }
+
+
+
+   public void setLines(List<OrderLine> lines)
+   {
+      this.lines = lines;
    }
 
 

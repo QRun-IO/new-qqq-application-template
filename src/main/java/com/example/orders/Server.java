@@ -35,7 +35,8 @@ public class Server
             .withPort(DEFAULT_PORT)
             .withServeFrontendMaterialDashboard(true)
             .withFrontendMaterialDashboardHostedPath("/") // dashboard at root
-            .withServeLegacyUnversionedMiddlewareAPI(false)
+            // expose middleware APIs that the dashboard expects
+            .withServeLegacyUnversionedMiddlewareAPI(true)
             .withMiddlewareVersionList(List.of(new MiddlewareVersionV1()));
 
          jServer.start();

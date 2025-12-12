@@ -26,7 +26,7 @@ import java.time.Instant;
 
 @Entity
 @Table(name = Customer.TABLE_NAME)
-@QMetaDataProducingEntity(produceTableMetaData = true, tableMetaDataCustomizer = Customer.TableMetaDataCustomizer.class)
+@QMetaDataProducingEntity(produceTableMetaData = true, tableMetaDataCustomizer = Customer.TableMetaDataCustomizer.class, producePossibleValueSource = true)
 public class Customer extends QRecordEntity
 {
    public static final String TABLE_NAME  = "customer";
@@ -72,6 +72,13 @@ public class Customer extends QRecordEntity
 
 
 
+   public void setId(Long id)
+   {
+      this.id = id;
+   }
+
+
+
    public String getName()
    {
       return name;
@@ -83,6 +90,13 @@ public class Customer extends QRecordEntity
    {
       this.name = name;
       return this;
+   }
+
+
+
+   public void setName(String name)
+   {
+      this.name = name;
    }
 
 
@@ -102,6 +116,13 @@ public class Customer extends QRecordEntity
 
 
 
+   public void setEmail(String email)
+   {
+      this.email = email;
+   }
+
+
+
    public Instant getCreateDate()
    {
       return createDate;
@@ -117,6 +138,13 @@ public class Customer extends QRecordEntity
 
 
 
+   public void setCreateDate(Instant createDate)
+   {
+      this.createDate = createDate;
+   }
+
+
+
    public Instant getModifyDate()
    {
       return modifyDate;
@@ -128,6 +156,13 @@ public class Customer extends QRecordEntity
    {
       this.modifyDate = modifyDate;
       return this;
+   }
+
+
+
+   public void setModifyDate(Instant modifyDate)
+   {
+      this.modifyDate = modifyDate;
    }
 
 
