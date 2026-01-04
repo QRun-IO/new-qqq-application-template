@@ -42,7 +42,7 @@ any right to use them
       <dependency>
         <groupId>com.kingsrook.qqq</groupId>
         <artifactId>qqq-bom-pom</artifactId>
-        <version>$${qqq.version.bom}</version>
+        <version>#[[${qqq.version.bom}]]#</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -64,7 +64,7 @@ any right to use them
     <dependency>
       <groupId>com.kingsrook.qqq</groupId>
       <artifactId>qqq-backend-module-postgres</artifactId>
-      <version>$${qqq.version.bom}</version>
+      <version>#[[${qqq.version.bom}]]#</version>
     </dependency>
     <dependency>
       <groupId>com.kingsrook.qqq</groupId>
@@ -93,7 +93,7 @@ any right to use them
     <dependency>
       <groupId>com.kingsrook.qqq</groupId>
       <artifactId>qqq-frontend-material-dashboard</artifactId>
-      <version>$${qqq.version.frontendMaterialDashboard}</version>
+      <version>#[[${qqq.version.frontendMaterialDashboard}]]#</version>
     </dependency>
 
     <!-- JPA annotations for entities -->
@@ -119,7 +119,7 @@ any right to use them
     <dependency>
       <groupId>com.kingsrook.qqq</groupId>
       <artifactId>qqq-middleware-health</artifactId>
-      <version>$${qqq.version.bom}</version>
+      <version>#[[${qqq.version.bom}]]#</version>
     </dependency>
 
     <!-- Testing & utilities -->
@@ -210,10 +210,10 @@ any right to use them
         </dependencies>
         <configuration>
           <propertyFile>src/main/resources/db/liquibase.properties</propertyFile>
-          <url>$${env.RDBMS_URL}</url>
-          <username>$${env.RDBMS_USERNAME}</username>
-          <password>$${env.RDBMS_PASSWORD}</password>
-          <contexts>$${env.LB_CONTEXTS}</contexts>
+          <url>#[[${env.RDBMS_URL}]]#</url>
+          <username>#[[${env.RDBMS_USERNAME}]]#</username>
+          <password>#[[${env.RDBMS_PASSWORD}]]#</password>
+          <contexts>#[[${env.LB_CONTEXTS}]]#</contexts>
         </configuration>
       </plugin>
     </plugins>
