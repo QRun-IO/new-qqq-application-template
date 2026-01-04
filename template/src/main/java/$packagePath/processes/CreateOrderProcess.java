@@ -1,8 +1,8 @@
-package $packageName.processes;
+package ${packageName}.processes;
 
 
-import $packageName.model.Order;
-import $packageName.model.OrderLine;
+import ${packageName}.model.Order;
+import ${packageName}.model.OrderLine;
 import com.kingsrook.qqq.backend.core.exceptions.QException;
 import com.kingsrook.qqq.backend.core.model.actions.processes.RunBackendStepInput;
 import com.kingsrook.qqq.backend.core.model.actions.processes.RunBackendStepOutput;

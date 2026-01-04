@@ -1,7 +1,7 @@
-package $packageName.metadata;
+package ${packageName}.metadata;
 
 
-import $packageName.processes.CreateOrderProcess;
+import ${packageName}.processes.CreateOrderProcess;
 import com.kingsrook.qqq.backend.core.exceptions.QException;
 import com.kingsrook.qqq.backend.core.instances.AbstractQQQApplication;
 import com.kingsrook.qqq.backend.core.instances.QInstanceEnricher;
@@ -53,9 +53,9 @@ public class OrderAppMetaDataProvider extends AbstractQQQApplication
       qInstance.addBackend(defineMemoryBackend());
       qInstance.addBackend(defineFilesystemBackend());
 
-      MetaDataProducerHelper.processAllMetaDataProducersInPackage(qInstance, "$packageName.model");
-      MetaDataProducerHelper.processAllMetaDataProducersInPackage(qInstance, "$packageName.processes");
-      MetaDataProducerHelper.processAllMetaDataProducersInPackage(qInstance, "$packageName.metadata");
+      MetaDataProducerHelper.processAllMetaDataProducersInPackage(qInstance, "${packageName}.model");
+      MetaDataProducerHelper.processAllMetaDataProducersInPackage(qInstance, "${packageName}.processes");
+      MetaDataProducerHelper.processAllMetaDataProducersInPackage(qInstance, "${packageName}.metadata");
 
       // Ensure backend names inferred for tables
       qInstance.getTables().values().forEach(OrderAppMetaDataProvider::setTableBackendNamesForRdbms);

@@ -1,4 +1,4 @@
-package $packageName.startup;
+package ${packageName}.startup;
 
 
 import java.util.Optional;

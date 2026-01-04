@@ -1,7 +1,7 @@
-package $packageName.model;
+package ${packageName}.model;
 
 
-import $packageName.metadata.OrderAppMetaDataProvider;
+import ${packageName}.metadata.OrderAppMetaDataProvider;
 import com.kingsrook.qqq.backend.core.exceptions.QException;
 import com.kingsrook.qqq.backend.core.model.data.QField;
 import com.kingsrook.qqq.backend.core.model.data.QRecordEntity;

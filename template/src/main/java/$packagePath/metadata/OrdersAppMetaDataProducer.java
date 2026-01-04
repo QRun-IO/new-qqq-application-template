@@ -1,10 +1,10 @@
-package $packageName.metadata;
+package ${packageName}.metadata;
 
 
-import $packageName.model.Customer;
-import $packageName.model.Order;
-import $packageName.model.OrderLine;
-import $packageName.model.Product;
+import ${packageName}.model.Customer;
+import ${packageName}.model.Order;
+import ${packageName}.model.OrderLine;
+import ${packageName}.model.Product;
 import com.kingsrook.qqq.backend.core.model.metadata.QInstance;
 import com.kingsrook.qqq.backend.core.model.metadata.MetaDataProducerInterface;
 import com.kingsrook.qqq.backend.core.model.metadata.layout.QIcon;

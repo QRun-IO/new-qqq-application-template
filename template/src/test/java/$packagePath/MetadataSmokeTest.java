@@ -3,7 +3,7 @@ package $packageName;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import $packageName.metadata.OrderAppMetaDataProvider;
+import ${packageName}.metadata.OrderAppMetaDataProvider;
 import com.kingsrook.qqq.backend.core.model.metadata.QInstance;
 import org.junit.jupiter.api.Test;
 
