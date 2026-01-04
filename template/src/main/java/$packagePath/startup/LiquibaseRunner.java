@@ -1,4 +1,4 @@
-package com.example.orders.startup;
+package $packageName.startup;
 
 
 import java.util.Optional;

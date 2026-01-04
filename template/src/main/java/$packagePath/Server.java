@@ -1,9 +1,9 @@
-package com.example.orders;
+package $packageName;
 
 
 import java.util.List;
-import com.example.orders.metadata.OrderAppMetaDataProvider;
-import com.example.orders.startup.LiquibaseRunner;
+import $packageName.metadata.OrderAppMetaDataProvider;
+import $packageName.startup.LiquibaseRunner;
 import com.kingsrook.qqq.middleware.javalin.QApplicationJavalinServer;
 import com.kingsrook.qqq.middleware.javalin.specs.v1.MiddlewareVersionV1;
 
