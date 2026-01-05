@@ -1,5 +1,7 @@
 # new-qqq-application-template
 
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 Starter template for new QQQ applications.
 
 **For:** Developers starting a new QQQ project from scratch  
@@ -123,4 +125,4 @@ Stable template. Updated with each QQQ release.
 
 ## License
 
-Proprietary - QRun.IO
+Apache-2.0 - See [LICENSE](LICENSE) for details.
