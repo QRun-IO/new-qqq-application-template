@@ -1,0 +1,3 @@
+profile: application-template
+orb_version: '0.8'
+default_branch: main
