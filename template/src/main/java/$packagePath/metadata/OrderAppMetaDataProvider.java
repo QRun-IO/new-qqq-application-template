@@ -149,7 +149,7 @@ public class OrderAppMetaDataProvider extends AbstractQQQApplication
       QAuthenticationMetaData mockAuth = new QAuthenticationMetaData()
          .withName("mock")
          .withType(QAuthenticationType.MOCK);
-      qInstance.setAuthentication(mockAuth);
+      qInstance.withInstanceDefaultAuthentication(mockAuth);
    }
 
 

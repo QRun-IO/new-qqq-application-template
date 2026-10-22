@@ -29,12 +29,12 @@ any right to use them
     <!-- Common props for all qqq modules -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
     <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
     <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
-    <qqq.version.bom>0.33.0-health-endpoints-bc5898783-SNAPSHOT</qqq.version.bom>
-    <qqq.version.frontendMaterialDashboard>0.28.0-SNAPSHOT</qqq.version.frontendMaterialDashboard>
+    <qqq.version.bom>4.0.0</qqq.version.bom>
+    <qqq.version.frontendMaterialDashboard>0.41.0</qqq.version.frontendMaterialDashboard>
   </properties>
 
   <dependencyManagement>
